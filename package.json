@@ -1,13 +1,25 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "12.17.0",
+    "npm": "6.14.5"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chemshit/EmailyServer.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chemshit/EmailyServer/issues"
+  },
+  "homepage": "https://github.com/chemshit/EmailyServer#readme",
+  "description": "",
   "dependencies": {
     "express": "^4.17.1"
   }
