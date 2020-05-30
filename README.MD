@@ -9,8 +9,28 @@ those surveys will be used for.
 
 to start it
 
-<code> node index.js </code>
+`node index.js`
 
 and it will run on localhost:5000.
 
-Heroku integration will be done as well.
+### Preperations
+
+You need to create a config folder and add keys.js that keys.js file should be look like below:
+
+```
+module.exports = {
+    googleClientID: 'ClientID pasted here',
+    googleClientSecret: 'Client Secret pasted here'
+};
+```
+
+## Course Features
+
+    - Will be deployed on Heroku
+    - Google OAuth Authentication
+    - Payment from Stripe from e-mail
+    - Campaign Creation
+
+## I want to include
+
+    - E-mail authentication , facebook authenticaiton
