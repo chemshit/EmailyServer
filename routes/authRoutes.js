@@ -14,4 +14,14 @@ module.exports = (app) => {
 
     app.get('/auth/google/callback', passport.authenticate('google'));
 
+    app.get('/api/logout', (req, res) => {
+        req.logout(); // passport includes this function to remove cookie.
+        res.send(req.user);
+    });
+
+    app.get('/api/current_user', (req, res) => {
+        //passport includes user object into request
+        res.send(req.user);
+
+    });
 };

@@ -18,9 +18,11 @@ and it will run on localhost:5000.
 You need to create a config folder and add keys.js that keys.js file should be look like below:
 
 ```
-module.exports = {
-    googleClientID: 'ClientID pasted here',
-    googleClientSecret: 'Client Secret pasted here'
+module.exports =
+    googleClientID: '<ClientID pasted here>',
+    googleClientSecret: '<Client Secret pasted here>',
+    mongoURI: '<Mongo URI will be here>'
+    cookieKey: '<Cookie Key>'
 };
 ```
 
@@ -34,3 +36,5 @@ module.exports = {
 ## I want to include
 
     - E-mail authentication , facebook authenticaiton
+    - Update Cookie Session and use Express-Session to keep session reference
+    -
