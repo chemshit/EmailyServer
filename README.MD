@@ -5,7 +5,7 @@ Study Project for Stephen Grider's Node with React: Fullstack Web Development Ud
 ## Emaily Server
 
 Express and Node part of the project. That will take list of e-mails and send out surveys
-those surveys will be used for.
+and collect results.
 
 to start it
 
@@ -15,7 +15,7 @@ and it will run on localhost:5000.
 
 ### Preperations
 
-You need to create a config folder and add keys.js that keys.js file should be look like below:
+You need to create a config folder and add dev.js file should be look like below containing development keys.
 
 ```
 module.exports =
@@ -26,15 +26,16 @@ module.exports =
 };
 ```
 
+If you want to push project to heroku you need to set process.env variables that you could find variables in `config/prod.js`.
+
 ## Course Features
 
-    - Will be deployed on Heroku
-    - Google OAuth Authentication
-    - Payment from Stripe from e-mail
-    - Campaign Creation
+- Will be deployed on Heroku
+- Google OAuth Authentication
+- Payment from Stripe from e-mail
+- Campaign Creation
 
 ## I want to include
 
-    - E-mail authentication , facebook authenticaiton
-    - Update Cookie Session and use Express-Session to keep session reference
-    -
+- E-mail authentication , facebook authenticaiton
+- Update Cookie Session and use Express-Session to keep session reference
