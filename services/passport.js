@@ -50,18 +50,15 @@ passport.use(
             callbackURL: '/auth/google/callback',
             proxy: true  //If you trust it. This is to solve google authentication problem
         },
-        (accessToken, refreshToken, profile, done) => {
-            User.findOne({ googleId: profile.id })
-                .then((existingUser) => {
-                    if (existingUser) {
-                        //We already have a record for this profile.id
-                        done(null, existingUser); // This is to inform google done(err,user,)
-                    } else {
-                        //Make a new record
-                        new User({ googleId: profile.id }).save()
-                            .then(user => done(null, user));
-                    }
-                });
+        async (accessToken, refreshToken, profile, done) => {
+            const existingUser = await User.findOne({ googleId: profile.id });
+
+            if (existingUser) {
+                return done(null, existingUser); // This is to inform google done(err,user,)
+            }
+
+            const user = await new User({ googleId: profile.id }).save();
+            done(null, user);
 
         }
     )
